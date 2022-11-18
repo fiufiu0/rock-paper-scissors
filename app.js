@@ -1,4 +1,3 @@
-console.log("conected");
 
 function getComputerChoice() {
     let choice = ["rock", "paper", "scissors"];
@@ -7,5 +6,21 @@ function getComputerChoice() {
     return random;
 }
 
-getComputerChoice();
+// getComputerChoice();
 
+function playRound(playerSelection, computerSelection){
+    if((playerSelection == 'rock' && computerSelection == 'scissors') ||
+    (playerSelection == 'scissors' && computerSelection == 'paper') ||
+    (playerSelection == 'paper' && computerSelection == 'rock')){
+        console.log(`Player win! ${playerSelection} vs ${computerSelection}` )
+    }else if(playerSelection == computerSelection){
+        console.log("TIE")
+    } else {
+        console.log(`Computer win! ${computerSelection} vs ${playerSelection}`)
+    }
+}
+
+const playerSelection = "rock";
+const computerSelection = getComputerChoice();
+
+playRound(playerSelection, computerSelection);
