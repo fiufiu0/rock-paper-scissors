@@ -6,9 +6,9 @@ function getComputerChoice() {
     return random;
 }
 
-// getComputerChoice();
 
 function playRound(playerSelection, computerSelection){
+    
     if((playerSelection == 'rock' && computerSelection == 'scissors') ||
     (playerSelection == 'scissors' && computerSelection == 'paper') ||
     (playerSelection == 'paper' && computerSelection == 'rock')){
@@ -20,7 +20,7 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
-const playerSelection = "rock";
+const playerSelection = prompt("Rock, paper, scissors?").toLowerCase();
 const computerSelection = getComputerChoice();
 
 playRound(playerSelection, computerSelection);
