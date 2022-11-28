@@ -1,3 +1,5 @@
+const buttons = document.querySelectorAll('button')
+
 
 function getComputerChoice() {
     let choice = ["rock", "paper", "scissors"];
@@ -25,15 +27,30 @@ function playRound(playerSelection, computerSelection){
     }
 }
 
+buttons.forEach(button => {
+    button.addEventListener('click', () =>{
+        console.log(button)
+        let playerSelection = '';
+        if(button.id == 1){
+            playerSelection = 'rock';
+        } else if(button.id == 2){
+            playerSelection = 'paper'
+        } else if(button.id == 3){
+            playerSelection = 'scissors'
+        }
+        playRound(playerSelection, getComputerChoice())
+    })
+})
+
 
 function game(){
     
-    for (let i = 0; i < 5; i++) {
-        const playerSelection = prompt("Rock, paper, scissors?").toLowerCase();
-        const computerSelection = getComputerChoice();
-        playRound(playerSelection, computerSelection);
+    // for (let i = 0; i < 5; i++) {
+    //     const playerSelection = prompt("Rock, paper, scissors?").toLowerCase();
+    //     const computerSelection = getComputerChoice();
+    //     playRound(playerSelection, computerSelection);
         
-     }
+    //  }
 
      if(playerPoints > computerPoints) {
         console.log("Player won the game!")

@@ -5,14 +5,46 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper Scissors</title>
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <p>Rock Paper Scissors in console</p>
-    <div class="container">
-      <button>Rock</button>
-      <button>Papper</button>
-      <button>Scissors</button>
+    <div class="main">
+      <h1 class="title">Rock Paper Scissors</h1>
+      <div class="info-container">
+        <div class="player">
+          <p class="member">Player</p>
+          <p id="player">0</p>
+        </div>
+        <div class="computer">
+          <p class="member">Computer</p>
+          <p id="computer">0</p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="btn" id="1">✊</button>
+        <button class="btn" id="2">✋</button>
+        <button class="btn" id="3">✌</button>
+      </div>
     </div>
   </body>
 </html>
