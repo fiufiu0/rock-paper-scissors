@@ -29,7 +29,7 @@ function playRound(playerSelection, computerSelection){
 
 buttons.forEach(button => {
     button.addEventListener('click', () =>{
-        console.log(button.id)
+        console.log(button)
         let playerSelection = '';
         if(button.id == 1){
             playerSelection = 'rock';

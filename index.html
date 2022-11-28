@@ -24,16 +24,26 @@
       href="img/favicon-16x16.png"
     />
     <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="main">
-      <p>Rock Paper Scissors in console</p>
-      <div class="container">
-        <p id="player">0</p>
-        <p id="computer">0</p>
-        <button id="1">Rock ✊</button>
-        <button id="2">Papper ✋</button>
-        <button id="3">Scissors ✌</button>
+      <h1 class="title">Rock Paper Scissors</h1>
+      <div class="info-container">
+        <div class="player">
+          <p class="member">Player</p>
+          <p id="player">0</p>
+        </div>
+        <div class="computer">
+          <p class="member">Computer</p>
+          <p id="computer">0</p>
+        </div>
+      </div>
+
+      <div class="button-container">
+        <button class="btn" id="1">✊</button>
+        <button class="btn" id="2">✋</button>
+        <button class="btn" id="3">✌</button>
       </div>
     </div>
   </body>
