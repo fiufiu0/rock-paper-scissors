@@ -27,9 +27,26 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 300px;
+    width: 400px;
     margin: auto;
     padding: 50px 0px;
+    border: 1px solid #363A59
+}
+
+.player, .computer{
+    width: 50%;
+}
+
+
+.member {
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+}
+
+.score {
+    font-size: 26px;
 }
 
 .button-container {
