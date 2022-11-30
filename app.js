@@ -21,11 +21,13 @@ function playRound(playerSelection, computerSelection){
     (playerSelection == 'paper' && computerSelection == 'rock')){
         playerPoints++;
         player.textContent = `${playerPoints}`
+        result.textContent = 'point for the player';
     }else if(playerSelection == computerSelection){
-        console.log("Tie!")
+        result.textContent = 'Tie!';
     } else {
         computerPoints++;
         comp.textContent = `${computerPoints}`
+        result.textContent = 'Point for the computer';
     }
 
     checkWinner();
@@ -53,6 +55,23 @@ buttons.forEach(button => {
 
 function checkWinner(){
     
-    
+    if(playerPoints === 5) {
+        result.textContent = `Player won the game! ${playerPoints} vs ${computerPoints}`;
+        result.style.color = "green"
+        player.textContent = 0;
+        comp.textContent = 0;
+        playerPoints = 0;
+        computerPoints = 0;
+
+    } else if(computerPoints === 5) {
+        result.textContent = `Computer won the game! ${computerPoints} vs ${playerPoints}`;
+        result.style.color = "green"
+        comp.textContent = 0;
+        player.textContent = 0
+        computerPoints = 0;
+        playerPoints = 0;
+        
+    }
+
 }
 
