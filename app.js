@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection){
     (playerSelection == 'paper' && computerSelection == 'rock')){
         playerPoints++;
         player.textContent = `${playerPoints}`
-        result.textContent = 'point for the player';
+        result.textContent = 'Point for the player';
     }else if(playerSelection == computerSelection){
         result.textContent = 'Tie!';
     } else {
